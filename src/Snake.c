@@ -109,14 +109,14 @@ int move_snake(struct Snake* snake, struct Map* map) {
 
   // checking for apple
   if (*snake->positions[0] == '@') {
-    // eat_apple(snake, map, prev_tail);
+    eat_apple(snake, map, prev_tail);
   } else {
     // resetting char at tail to the background
     *prev_tail = '.';
   }
 
   // changing character at head
-  *snake->positions[snake->size - 1] = '#';
+  *snake->positions[0] = '#';
 
   return 0;
 }
