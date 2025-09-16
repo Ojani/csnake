@@ -1,0 +1,28 @@
+{
+  "files.associations": {
+    "*.ejs": "html",
+    "stdlib.h": "c",
+    "unistd.h": "c",
+    "cstring": "c",
+    "__bit_reference": "c",
+    "__string": "c",
+    "_ptrcheck.h": "c",
+    "map.h": "c",
+    "string.h": "c",
+    "stdio.h": "c",
+    "snake.h": "c",
+    "initializer_list": "c",
+    "__hash_table": "c",
+    "__split_buffer": "c",
+    "array": "c",
+    "bitset": "c",
+    "hash_map": "c",
+    "string": "c",
+    "string_view": "c",
+    "unordered_map": "c",
+    "vector": "c",
+    "utility": "c",
+    "ncurses.h": "c",
+    "apple.h": "c"
+  }
+}
