@@ -1,7 +1,7 @@
 #ifndef SNAKE_H
 #define SNAKE_H
 
-#include "../include/Map.h"
+#include "Map.h"
 
 enum Direction { UP, DOWN, LEFT, RIGHT };
 

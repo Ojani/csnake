@@ -101,8 +101,10 @@ int move_snake(struct Snake* snake, struct Map* map) {
     return 1;
   }
 
-  // rotating memory locations to "move" the body towards the head direction
-  // memove(snake->positions, snake->positions);
+  // rotating memory locations to "move" the body towards the head
+  for (int i = snake->size - 1; i > 0; i--) {
+    snake->positions[i] = snake->positions[i - 1];
+  }
 
   // changing head ptr to the char ptr in the corrext x and y pos
   snake->positions[0] = &map->map[snake->y][snake->x];
@@ -113,6 +115,11 @@ int move_snake(struct Snake* snake, struct Map* map) {
   } else {
     // resetting char at tail to the background
     *prev_tail = '.';
+  }
+
+  // head hit body
+  if (*snake->positions[0] == '#') {
+    return 1;
   }
 
   // changing character at head
