@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <time.h>
 #define FRAMES_PER_APPLE 10
-#define MAX_FAILS 30
+#define MAX_FAILS 100
 
 #include "../include/Map.h"
 
