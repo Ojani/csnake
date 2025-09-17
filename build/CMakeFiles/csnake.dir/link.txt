@@ -1,1 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/cc  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/csnake.dir/src/main.c.o CMakeFiles/csnake.dir/src/Map.c.o CMakeFiles/csnake.dir/src/Snake.c.o CMakeFiles/csnake.dir/src/Apple.c.o -o csnake  /opt/local/lib/libcurses.dylib /opt/local/lib/libform.dylib
