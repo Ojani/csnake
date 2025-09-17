@@ -28,6 +28,7 @@ int main() {
     // returns true when you are out of bounds
     if (move_snake(&snake, &map)) {
       printf("You lost!\n");
+      print_map(&map);
 
       // freeing allocated memory (not working fully)
       free(snake.positions);
