@@ -37,19 +37,23 @@ int move_snake(struct Snake* snake, struct Map* map) {
 
   if (last_usr_input != ERR) {
     // converting lowercase to uppsercase
-    if (last_usr_input >= 'a') last_usr_input -= 32;
+    if (last_usr_input >= 'a' && last_usr_input <= 'z') last_usr_input -= 32;
 
     switch (last_usr_input) {
       case ('W'):
+      case (KEY_UP):
         if (snake->direction != DOWN) snake->direction = UP;
         break;
       case ('A'):
+      case (KEY_LEFT):
         if (snake->direction != RIGHT) snake->direction = LEFT;
         break;
       case ('S'):
+      case (KEY_DOWN):
         if (snake->direction != UP) snake->direction = DOWN;
         break;
       case ('D'):
+      case (KEY_RIGHT):
         if (snake->direction != LEFT) snake->direction = RIGHT;
         break;
     }
