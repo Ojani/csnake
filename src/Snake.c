@@ -100,8 +100,9 @@ int move_snake(struct Snake* snake, struct Map* map) {
   }
 
   // rotating memory locations to "move" the body towards the head
-  for (int i = snake->size - 1; i > 0; i--) {
-    snake->positions[i] = snake->positions[i - 1];
+  if (snake->size > 1) {
+    memmove(snake->positions + 1, snake->positions,
+            (snake->size - 1) * sizeof(char*));
   }
 
   // changing head ptr to the char ptr in the corrext x and y pos
