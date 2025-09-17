@@ -9,6 +9,8 @@ struct Map {
 
 void print_map(struct Map* map);
 
+void printf_map(struct Map* map);
+
 void init_map(struct Map* map);
 
 #endif  // MAP_H

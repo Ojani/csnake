@@ -33,10 +33,6 @@ void eat_apple(struct Snake* snake, struct Map* map, char* prev_tail) {
 
 int move_snake(struct Snake* snake, struct Map* map) {
   // checking user input to see if we need to change direction
-  initscr();
-  nodelay(stdscr, TRUE);
-  noecho();
-  cbreak();
   int last_usr_input = getch();
 
   if (last_usr_input != ERR) {
@@ -58,8 +54,6 @@ int move_snake(struct Snake* snake, struct Map* map) {
         break;
     }
   }
-
-  endwin();
 
   // preserving previous tail position
   char* prev_tail = snake->positions[snake->size - 1];
