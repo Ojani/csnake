@@ -20,12 +20,19 @@ void print_title(void) {
 }
 
 int main(int argc, char* argv[]) {
+  double loop_interval_s = 1.5;
+
   int width = 60, height = 20;
 
-  if (argc == 3) {
+  if (argc >= 3) {
     width = atoi(argv[1]);
     height = atoi(argv[2]);
+    if (argc > 3) {
+      loop_interval_s = atof(argv[3]);
+    }
   }
+
+  const double loop_interval_micros = loop_interval_s * 100000;
 
   // initializing ncurses
   initscr();
@@ -51,7 +58,7 @@ int main(int argc, char* argv[]) {
 
   // game loop
   while (1) {
-    usleep(FRAME_INTERVAL_MS);
+    usleep(loop_interval_micros);
 
     // returns true when you are out of bounds
     if (move_snake(&snake, &map)) {
