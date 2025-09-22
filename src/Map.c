@@ -18,7 +18,7 @@ void printf_map(struct Map* map) {
 }
 
 void init_map(struct Map* map) {
-  map->map = malloc(map->height);
+  map->map = malloc(map->height * sizeof(char*));
 
   for (int i = 0; i < map->height; i++) {
     char* row = malloc(map->width + 1);  // extra space for null-term char
